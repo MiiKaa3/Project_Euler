@@ -30,4 +30,8 @@
 *.exe
 *.out
 *.app
+
+# Mine
 app
+/c++/out
+/.vscode
