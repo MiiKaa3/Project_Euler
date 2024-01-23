@@ -2,7 +2,6 @@
 #include <cstdint>
 #include <vector>
 #include <numeric>
-#include <algorithm>
 
 int main()
 {

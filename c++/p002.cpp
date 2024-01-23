@@ -2,7 +2,7 @@
 #include <cstdint>
 #include <vector>
 #include <numeric>
-#include <algorithm>
+// #include <algorithm>
 
 int main()
 {
