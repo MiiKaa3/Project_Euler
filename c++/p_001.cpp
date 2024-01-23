@@ -6,7 +6,7 @@
 
 int main()
 {
-  constexpr uint64_t max = 10000000;
+  constexpr uint64_t max = 1000;
 
   std::vector<uint64_t> range(max - 1);
   std::iota(range.begin(), range.end(), 1);
