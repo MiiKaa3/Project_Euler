@@ -15,7 +15,7 @@ int main()
   std::transform(
     range.begin(), range.end(),
     res.begin(),
-    [](int x) { return !(x % 3ULL) || !(x % 5ULL) ? x : 0; }
+    [](int x) { return !(x % 3) || !(x % 5) ? x : 0; }
   );
 
   std::cout << std::reduce(res.begin(), res.end()) << std::endl;
