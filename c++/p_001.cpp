@@ -6,17 +6,13 @@
 
 int main()
 {
-  constexpr uint64_t max = 1000;
-
-  std::vector<uint64_t> range(max - 1);
-  std::iota(range.begin(), range.end(), 1);
-  
-  std::vector<uint64_t> res(max - 1);
-  std::transform(
-    range.begin(), range.end(),
-    res.begin(),
-    [](int x) { return !(x % 3) || !(x % 5) ? x : 0; }
-  );
-
-  std::cout << std::reduce(res.begin(), res.end()) << std::endl;
+  std::vector<uint64_t> nums(999);
+  std::iota(nums.begin(), nums.end(), 1);
+  std::cout
+    << std::accumulate(
+      nums.begin(), nums.end(),
+      (uint64_t)0,
+      [](uint64_t a, uint64_t b) { return !(b % 3) || !(b % 5) ? a + b : a; }
+    )
+    << std::endl;
 }
