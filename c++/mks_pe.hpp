@@ -8,7 +8,7 @@ namespace mks_pe
 #include <algorithm>
 // #include <cstdint>
 
-std::vector<bool> sievePrimes (const size_t& n)
+std::vector<bool> eratosthenesSieve (const size_t& n)
 {
   std::vector<bool> res(n, true);
   res[0] = res[1] = false;
@@ -26,6 +26,19 @@ std::vector<T> sieve2primes (const std::vector<bool>& sieve)
   for (size_t i = 0; i < sieve.size(); ++i)
     if (sieve[i])
       res.push_back(static_cast<T>(i));
+  return res;
+}
+
+template <typename T>
+std::vector<T> sieve2composite (const std::vector<bool>&  sieve)
+{
+  std::vector<T> res;
+  for (size_t i = 0; i < sieve.size(); ++i)
+    if (!sieve[i])
+      res.push_back(static_cast<T>(i));
+  res.erase(res.begin());
+  res.erase(res.begin());
+
   return res;
 }
 
