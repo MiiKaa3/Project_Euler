@@ -6,7 +6,7 @@ namespace mks_pe
 
 #include <vector>
 #include <algorithm>
-#include <cstdint>
+// #include <cstdint>
 
 std::vector<bool> sievePrimes (const size_t& n)
 {
@@ -44,6 +44,15 @@ std::vector<T> primeFactors (T n, const std::vector<T>& primes)
     p++;
   }
   return res;
+}
+
+template <typename T>
+bool isPalindrome(const T& n)
+{
+  std::vector<T> digits;
+  for (T i = n; i > 0; i /= 10)
+    digits.push_back(i % 10);
+  return std::equal(digits.begin(), digits.begin() + (digits.size() / 2), digits.rbegin());
 }
 
 }
