@@ -1,12 +1,12 @@
 #ifndef MKS_PE_HPP
 #define MKS_PE_HPP
 
+#include <vector>
+#include <algorithm>
+
 namespace mks_pe
 {
 
-#include <vector>
-#include <algorithm>
-// #include <cstdint>
 
 std::vector<bool> eratosthenesSieve (const size_t& n)
 {
