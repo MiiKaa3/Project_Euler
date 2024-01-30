@@ -12,7 +12,7 @@ def main():
   num = f'{int(sys.argv[2]):03d}'
   match sys.argv[1]:
     case 'build':
-      cmd = f'g++ -std=c++20 ./c++/p{num}.cpp -o ./c++/out/p{num}'
+      cmd = f'g++ -std=c++20 ./c++/p{num}*.cpp -o ./c++/out/p{num}'
       print(cmd)
       os.system(cmd)
       
@@ -24,7 +24,7 @@ def main():
       
     
     case 'br':
-      cmd = f'g++ -std=c++20 ./c++/p{num}.cpp -o ./c++/out/p{num} && time ./c++/out/p{num}'
+      cmd = f'g++ -std=c++20 ./c++/p{num}*.cpp -o ./c++/out/p{num} && time ./c++/out/p{num}'
       print(cmd)
       os.system(cmd)
           
