@@ -68,6 +68,18 @@ bool isPalindrome(const T& n)
   return std::equal(digits.begin(), digits.begin() + (digits.size() / 2), digits.rbegin());
 }
 
+template <typename T>
+std::vector<std::vector<T>> transpose (const std::vector<std::vector<T>>& mat)
+{
+  const size_t rows = mat.size();
+  const size_t cols = mat.at(0).size();
+  std::vector<std::vector<T>> res (cols, std::vector<T>(rows, 0));
+  for (size_t i = 0; i < rows; i++)
+    for (size_t j = 0; j < cols; j++)
+      res[j][i] = mat[i][j];
+  return res;
+}
+
 }
 
 #endif
